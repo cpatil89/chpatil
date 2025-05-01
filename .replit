@@ -1,0 +1,39 @@
+entrypoint = "main.py"
+modules = ["python-3.11"]
+
+[nix]
+channel = "stable-24_05"
+packages = ["chromedriver", "chromium", "geckodriver", "glibcLocales", "python311Packages.selenium", "python311Packages.webdriver-manager"]
+
+
+
+[unitTest]
+language = "python3"
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix"]
+
+[deployment]
+run = ["python3", "main.py"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 33665
+
+[[ports]]
+localPort = 33887
+
+[[ports]]
+localPort = 35173
+
+[[ports]]
+localPort = 35217
+
+[[ports]]
+localPort = 38719
+
+[[ports]]
+localPort = 45875
+
+
+
